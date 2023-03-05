@@ -1,0 +1,37 @@
+openapi: 3.0.1
+info:
+  version: 1.0.0
+  title: Example Weather API
+  description: An example weather API.
+servers:
+  - url: http://localhost:8080/api/
+paths:
+  /v1/predictions:
+    get:
+      parameters:
+        - name: location_id
+          in: query
+          description: Selects a prediction for a location id.
+          schema:
+            type: string
+          required: false
+      description: Returns a list of weather predictions.
+      responses:
+        '200':
+          description: Successfully got all weather predictions.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    location_id:
+                      type: string
+                    date_time:
+                      type: string
+                    temp_high:
+                      type: number
+                    temp_low:
+                      type: number
+
