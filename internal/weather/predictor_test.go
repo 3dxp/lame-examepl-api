@@ -41,5 +41,8 @@ func TestGetPredictionByLocationID(t *testing.T) {
 				t.Errorf("Expected prediction to be generated after '%s'", now)
 			}
 		})
+		t.Run("FAIL FOR EXAMPLE", func(t *testing.T) {
+			t.Fail()
+		})
 	})
 }
