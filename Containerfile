@@ -1,5 +1,6 @@
 FROM scratch
+ARG APP_PATH="./simple-example-api"
 USER 1000
-COPY simple-example-api /opt/app
+COPY  x$APP_PATH /opt/app
 EXPOSE 8080/tcp
 ENTRYPOINT ["/opt/app"]
