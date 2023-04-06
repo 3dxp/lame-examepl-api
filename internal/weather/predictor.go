@@ -29,7 +29,7 @@ func GetPredictions() []Prediction {
 // GetPredictionByLocationID gets a prediction for a specific locationID.
 func GetPredictionByLocationID(locationID string) Prediction {
 	// Super secret and accurate weather prediction algorithm.
-	tempLo := rand.Float64() * 90
+	tempLo := rand.Float64() * 900
 	tempHi := tempLo + rand.Float64()*25
 	return Prediction{
 		LocationID: locationID,
